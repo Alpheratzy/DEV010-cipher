@@ -1,0 +1,108 @@
+body{
+    background-color:#7f0082c9;
+    background-image: url(fondo-des2.png);
+    background-blend-mode:multiply;
+    font-family: 'Neucha', cursive;
+}
+
+/*todo lo que está en el header*/
+header {
+    margin-top: auto;
+    margin-left:auto;
+}
+h1 {
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+    font-size: 100px; 
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    font-weight: bold;
+    text-shadow: 8px 8px 8px #FF9800;
+}
+
+h2 {
+    font-family: 'Babylonica', cursive;
+    font-size:92px; 
+    text-align: center;
+    margin-block-start: 0.2rem;
+    margin-block-end: 0.2rem;
+    text-shadow: 8px 8px 7px #FF9800;
+}
+
+/*todo lo que va en el main*/
+main {
+    background-color: white;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 18%;
+    box-shadow: 15px 15px 5px #6f0289;
+    text-align: center;
+}
+
+#magico {
+    width: 2rem;
+    height: 2rem;
+}
+.formularios {
+    padding: 0rem;
+    margin-top: 0rem;
+    display:flex;
+    align-items: start;
+    padding-left: 2rem;
+    flex-wrap: wrap;
+}
+
+article {
+    padding: 17px;
+    width: 33vw;
+}
+
+label {
+    font-size: 2rem;
+}
+
+textarea {
+    border-radius: 18%;
+    font-size: 20px;
+    padding: 2rem;
+}
+input {
+    width: 100%;
+    height: 150px;
+  }
+
+#reset {
+    content: inherit;
+}  
+
+button {
+    font-family: 'Rock Salt', cursive;
+    font-size: 22px;
+    padding: 0.3rem;
+    border-radius: 35%;
+    border:outset;
+    border-color:#e18700 ;
+    background-color:#FF9800;
+    color:black;
+    box-shadow: 7px 7px 10px 1px rgba(68, 8, 72, 0.24);
+}
+
+button:hover {
+    background-color:#6f0289;
+    color:antiquewhite;
+    border:inset;
+}
+
+button:active {
+    transform: translateY(4px);
+}
+.divisor:hover {
+    transform: rotate(70deg);
+}
+
+/*sección footer*/
+footer {
+    text-align:center;
+    color:aliceblue;
+}
+
