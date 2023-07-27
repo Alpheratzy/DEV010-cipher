@@ -1,4 +1,4 @@
-# Cifrado César
+# Cifrado César "Revelio"
 
 ## Índice
 
@@ -16,110 +16,73 @@
 
 ## 1. Preámbulo
 
-Cifrar significa ocultar el contenido de un mensaje a simple vista, de manera
-que sólo las partes autorizadas pueden descifrar un texto cifrado.
-El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher)
-es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio
-César lo usaba para enviar órdenes secretas a sus generales en los campos de
-batalla.
+Este proyecto está dirigido a Potterheads- fans del Wizarding World y la saga de Harry Potter- de todas las edades, que quieran compartir mensajes cifrados con sus amigos y conocidos con fines de entretenimiento. 
 
-El cifrado césar es una de las técnicas más simples para cifrar un mensaje. Es
-un tipo de cifrado por sustitución, es decir que cada letra del texto original
-es reemplazada por otra que se encuentra un número fijo de posiciones
-(desplazamiento) más adelante en el mismo alfabeto.
+Es un producto pensado para niños y adolescentes, por lo que su diseño es caricaturezco y entretenido. 
+
+En ningún momento se espera que sirva para otros fines que requieran mayor seguridad de datos, porque el método empleado (El cifrado César) es uno de los más simples y más fáciles de resolver que existen.
+
+"Revelio" toma su nombre del hechizo que anula toda magia de ocultación "usado para revelar objetos ocultos, mensajes, cosas invisibles y pasadizos secretos" (https://harrypotter.fandom.com/es/wiki/Encantamiento_revelio)
+
+
+#Sobre el cifrado César:
+
+El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher)
+es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio César lo usaba para enviar órdenes secretas a sus generales en los campos de batalla.
+
+El cifrado césar es una de las técnicas más simples para cifrar un mensaje. Es un tipo de cifrado por sustitución, es decir que cada letra del texto original es reemplazada por otra que se encuentra un número fijo de posiciones (desplazamiento) más adelante en el mismo alfabeto.
 
 ![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
 
-Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
-
-* La letra A se cifra como D.
-* La palabra CASA se cifra como FDVD.
-* Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-* Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
-
-En la actualidad, todos los cifrados de sustitución simple se descifran con
-mucha facilidad y, aunque en la práctica no ofrecen mucha seguridad en la
-comunicación por sí mismos; el cifrado César sí puede formar parte de sistemas
-más complejos de codificación, como el cifrado Vigenère, e incluso tiene
-aplicación en el sistema ROT13.
-
 ## 2. Resumen del proyecto
 
-En este proyecto crearás una aplicación web que servirá para que tu usuaria
-pueda cifrar y descifrar un texto en el navegador indicando un desplazamiento
-específico de caracteres (_offset_). Lo harás utilizando HTML, CSS y JavaScript.
+Este proyecto es una aplicación web que permite que los usuarios y usuarias puedan cifrar y descifrar un texto en el navegador, indicando un "número mágico", que servirá de desplazamiento específico de carácteres, al mejor César´s style.
 
-La temática es libre. Piensa en qué situaciones se necesitaría cifrar un mensaje.
-Decide cómo debe ser esa experiencia de uso (qué pantallas, explicaciones, mensajes,
-colores, etc.) Algunas ideas de ejemplo:  
+Para encriptar tus mensajes, solo tienes que escribir en el cuadro de texto indicado, y luego pulsar el botón "Repello Muggleton"("alejar personas no-magas") y ver como ocurre la mágia.
 
-* Crear claves seguras para el email.
-* Encriptar/cifrar una tarjeta de crédito.
-* Herramienta de mensajería interna de una organización de derechos humanos en
-  una zona de conflicto.
-* Mensajería secreta para parejas.
+Para desencriptar, solo tienes que copiar el mensaje encriptado y apretar el botón "Revelio" y asi podrás conocer su significado secreto. 
 
-Como continuación del proyecto de preadmisión, volverás a trabajar sobre
-fundamentos de JavaScript, incluyendo conceptos como variables, condicionales,
-y funciones, así como eventos y manipulación básica del DOM, fundamentos de
-HTML y CSS. Mientras desarrollas este proyecto, te familiarizarás con nuevos
-conceptos también.
+### Los objetivos generales de este proyecto fueron son los siguientes
 
-### Los objetivos generales de este proyecto son los siguientes
-
-* Trabajar en base a un boilerplate, la estructura básica de un proyecto en
-  distintas carpetas (a través modulos en JS).
-* Conocer las herramientas de mantenimiento y mejora del código (linters y
-  pruebas unitarias).
+* Trabajar en base a un boilerplate, la estructura básica de un proyecto en distintas carpetas (a través modulos en JS).
+* Conocer las herramientas de mantenimiento y mejora del código (linters y pruebas unitarias).
 * Aprender sobre objetos, estructuras, métodos e iteración (bucles)
   en JavaScript
 * Implementar control de versiones con git (y la plataforma github)
 
 ## 3. Consideraciones generales
 
-* Este proyecto lo resolvemos de manera **individual**.
-* El rango de tiempo estimado para completar el proyecto es de 1 a 3 Sprints.
-* Enfócate en aprender y no solamente en "completar" el proyecto.
-* Te sugerimos que no intentes saberlo todo antes de empezar a codear.
-  No te preocupes demasiado ahora por lo que _todavía_ no entiendas.
-  Irás aprendiendo.
+* Este proyecto fue realizado de manera **individual** por Alexandra Ron.
+* El rango de tiempo empleado para completar el proyecto fue de 3 Sprints.
 
 ## 4. Hito: Criterios de aceptación mínimos del proyecto
 
-Estos son los requisitos que tu proyecto debe que cumplir para asegurar que tu trabajo
-cubra los objetivos principales.  
+Estos son los requisitos que tu proyecto debe que cumplir para asegurar que tu trabajo cubra los objetivos principales.  
 
 **1. Una interfaz que debe permitir a la usuaria:**
 
 * **Cifrar un mensaje**
-  - Insertar el mensaje (texto) que quiere cifrar. El mensaje usa alfabeto
-    simplificado (solamente mayúsculas y sin ñ).
+  - Insertar el mensaje (texto) que quiere cifrar. El mensaje usa alfabeto simplificado (solamente mayúsculas y sin ñ).
   - Elegir un numero de desplazamiento (_offset_) indicando cuántas
     posiciones quieres que el cifrado desplace cada caracter en el alfabeto.
     El numero sera positivo y entero (positive integer).
   - Ver el resultado del mensaje cifrado.
 
 * **Descifrar un mensaje**
-  - Insertar el mensaje (texto) que quieres descifrar. El mensaje usa alfabeto
-    simplificado (solamente mayúsculas y sin ñ).
-  - Elegir un numero desplazamiento (_offset_, que corresponda al que usamos
-    para cifrar) indicando cuántas posiciones quieres que
-    el cifrado desplace cada caracter en el alfabeto. El numero sera positivo y
-    entero (positive integer).
+  - Insertar el mensaje (texto) que quieres descifrar. El mensaje usa alfabeto simplificado (solamente mayúsculas y sin ñ).
+  - Elegir un numero desplazamiento (_offset_, que corresponda al que usamos para cifrar) indicando cuántas posiciones quieres que
+    el cifrado desplace cada caracter en el alfabeto. El numero sera positivo y entero (positive integer).
   - Ver el resultado del mensaje descifrado.
 
 **2. Pruebas unitarios de los métodos.**  
-Los metódos de `cipher` (`encode` y `decode`) deben tener cobertura con
-pruebas unitarias.
+Los metódos de `cipher` (`encode` y `decode`) deben tener cobertura con pruebas unitarias.
 
 **3. Código de tu proyecto subido a tu repo y interfaz "desplegada".**  
 El código final debe estar subido en un repositorio en GitHub.  
 La interfaz o pagina web, debe ser "desplegada" usando GitHub Pages.
 
 **4. Un README que contiene una definición del producto.**  
-En el README cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso
-para definir el producto final a nivel de experiencia y de interfaz. Estas
-preguntas sirven como guia:
+En el README cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso para definir el producto final a nivel de experiencia y de interfaz. Estas preguntas sirven como guia:
 
 * Quiénes son los principales usuarios de producto
 * Cuáles son los objetivos de estos usuarios en relación con tu producto
@@ -467,8 +430,7 @@ En resumen, los criterios de aceptación mínimos del proyecto para considerar
 Project Feedback:
 
 * [ ] Tiene una interfaz que permite a la usuaria cifrar y descifrar.
-* [ ] El proyecto será entregado incluyendo pruebas unitarios de los métodos de `cipher`
-(`encode` y `decode`).
+* [ ] El proyecto será entregado incluyendo pruebas unitarios de los métodos de `cipher` (`encode` y `decode`).
 * [ ] El proyecto será entregado libre de _errores_ de `eslint` (_warnings_ son ok).
 * [ ] El proyecto será entregado subiendo tu código a GitHub.
 * [ ] La interfaz será "desplegada" usando GitHub Pages.

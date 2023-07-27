@@ -1,5 +1,5 @@
-/*import { clean } from 'gh-pages';
-import cipher from './cipher.js';*/
+//import { clean } from 'gh-pages';
+import cipher from './cipher.js';
 
 ///obj. boton borrar campos.
 
@@ -23,46 +23,18 @@ function eleccionNumero(){
   offset = parseInt(numero.value);//por alguna razón, me identificó el valor de mi selector como cadena, y no como número, asi que tocó parsear.
   alert("Seleccionaste el número " + offset);
 }
-//Funciones de captura de texto:
-
-function cap_encriptar() {
-  let encriptar = por_encriptar.value;
-  encriptar = encriptar.toUpperCase();
-  //console.log (encriptar);
-  let texto_encriptado = ""; //creación de una variable vacía para llenarla luego
-  for (let index = 0; index < encriptar.length; index++) {//vamos a recorrer el string
-    let codigoEnAscii = encriptar.charCodeAt(index)
-    if (codigoEnAscii >= 65 && codigoEnAscii <= 90) { //este if, evita problemas con los carácteres especiales
-      codigoEnAscii = ((codigoEnAscii - 65 + offset) % 26) + 65;
-    }
-    texto_encriptado += String.fromCharCode(codigoEnAscii);
-  }
-  document.getElementById("tx_encriptable").value = texto_encriptado;
-  //cipher.encode();
-}
-
-function cap_desencriptar(){
-  let desencriptar = por_desencriptar.value;
-  desencriptar  = desencriptar.toUpperCase();
- // console.log (desencriptar)
-  let texto_desencriptado = ""; //creación de una variable vacía para llenarla luego
-  for (let index = 0; index < desencriptar.length; index++) {//vamos a recorrer el string. Empieza en cero, mantiene el bucle hasta que deja de ser menor que el largo de la cadena, actualiza el bucle en una posicion del index despues de cada iteracion
-    let codigoEnAscii2 = desencriptar.charCodeAt(index) //declaro variable donde se guardará el codigo ascii, y le doy el valor a traves de pasarle el método charcodeat a mi string (letra por letra)
-    if (codigoEnAscii2 >= 65 && codigoEnAscii2 <= 90) { //porsia no haya otro tipo de caracteres en el sting. Sin embargo, lo probé sin eso, y me quitaba los acentos :S
-      codigoEnAscii2 = ((codigoEnAscii2 - 65 - offset) % 26) + 65;
-    }
-    texto_desencriptado += String.fromCharCode(codigoEnAscii2);
-  }
-  document.getElementById("tx_desencriptable").value = texto_desencriptado;
-  //cipher.decode();
-}
-
 //Eventos de botones
 
-btn_encriptar.addEventListener("click", cap_encriptar)
+btn_encriptar.addEventListener("click", function(){
+  
+  document.getElementById("tx_encriptable").value = cipher.encode(por_encriptar.value, offset)
+
+})
 //btn_encriptar.addEventListener("click", encode)
 
-btn_desencriptar.addEventListener("click", cap_desencriptar)
+btn_desencriptar.addEventListener("click", function(){
+  document.getElementById("tx_desencriptable").value = cipher.decode(por_desencriptar.value, offset)
+})
 
 numero.addEventListener("change", eleccionNumero);
 

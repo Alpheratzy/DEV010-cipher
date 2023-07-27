@@ -14,6 +14,7 @@
       <H1>Revelio!</H1>
       <h2>Crea mensajes secretos con tus amigos</h2>
     </header>
+    <div class="contenedor">
     <main>
       <section id="numero">
       <!DOCTYPE html>
@@ -47,13 +48,13 @@
           <label id="por_encriptar" for="tx_encrip">¿Que mensaje quieres ocultar?</label>
           <br>
           <br>
-          <textarea id="tx_encriptable" type="text" name="tx_encrip" rows="4" cols="50" placeholder="Escribe tu secreto" value="secreto"></textarea>
+          <textarea id="tx_encriptable" type="text" name="tx_encrip" rows="4" cols="30" placeholder="Escribe tu secreto" value="secreto"></textarea>
           <br>
           <br>
           <button id="encriptar">Repello muggletum!</button>
         </article>
         <div class="divisor">
-          <img src="varita.png" width="300px">
+          <img src="varita.png" width="200px">
         </div>
         <article id="desencriptacion">
           <label id="por_desencriptar" for="tx_desencrip">¿Que mensaje quieres revelar?</label>
@@ -67,12 +68,14 @@
         </article>
       </section>
       <section id="reset">
+        <br>
         <button id="Limpiar">Limpiar campos</button>
       </section>
     </main>
+  </div>
     <br>
-    <footer>Creado por Alexandra Ron. Producto inspirado en el universo de Harry Potter </footer>
+    <footer>Creado por Alexandra Ron. <br>Producto inspirado en el universo de Harry Potter </footer>
 
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>

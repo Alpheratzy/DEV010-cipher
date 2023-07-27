@@ -16,11 +16,11 @@ const por_desencriptar= document.getElementById ("tx_desencriptable");
 const numero =document.querySelector ("select");
 const btn_encriptar = document.getElementById ("encriptar");
 const btn_desencriptar= document.getElementById ("desencriptar");
-//let offset=5;
+let offset=5;
 
 // funciones encode y decode pruebas
 function eleccionNumero(){
-  let offset = numero.value;
+  offset = parseInt(numero.value);//por alguna razón, me identificó el valor de mi selector como cadena, y no como número, asi que tocó parsear.
   alert("Seleccionaste el número " + offset);
 }
 //Funciones de captura de texto:
@@ -32,8 +32,8 @@ function cap_encriptar() {
   let texto_encriptado = ""; //creación de una variable vacía para llenarla luego
   for (let index = 0; index < encriptar.length; index++) {//vamos a recorrer el string
     let codigoEnAscii = encriptar.charCodeAt(index)
-    if (codigoEnAscii >= 65 && codigoEnAscii <= 90) {
-        codigoEnAscii = (codigoEnAscii - 65 + offset) % 26 + 65;
+    if (codigoEnAscii >= 65 && codigoEnAscii <= 90) { //este if, evita problemas con los carácteres especiales
+      codigoEnAscii = ((codigoEnAscii - 65 + offset) % 26) + 65;
     }
     texto_encriptado += String.fromCharCode(codigoEnAscii);
   }
@@ -44,12 +44,17 @@ function cap_encriptar() {
 function cap_desencriptar(){
   let desencriptar = por_desencriptar.value;
   desencriptar  = desencriptar.toUpperCase();
-  console.log (desencriptar)
+  // console.log (desencriptar)
   let texto_desencriptado = ""; //creación de una variable vacía para llenarla luego
   for (let index = 0; index < desencriptar.length; index++) {//vamos a recorrer el string. Empieza en cero, mantiene el bucle hasta que deja de ser menor que el largo de la cadena, actualiza el bucle en una posicion del index despues de cada iteracion
     let codigoEnAscii2 = desencriptar.charCodeAt(index) //declaro variable donde se guardará el codigo ascii, y le doy el valor a traves de pasarle el método charcodeat a mi string (letra por letra)
-    if (codigoEnAscii2 >= 65 && codigoEnAscii2 <= 90) { //no tengo claro que esto sea necesario pero solo asi me funciona
-      codigoEnAscii2 = (codigoEnAscii2 - 65 - offset) % 26 + 65;
+    if (codigoEnAscii2 >= 65 && codigoEnAscii2 <= 90) { //porsia no haya otro tipo de caracteres en el sting. Sin embargo, lo probé sin eso, y me quitaba los acentos :S
+    /* console.log("paso 1: ", {codigoEnAscii2, offset});
+      console.log("paso 2: ", codigoEnAscii2 - 65);
+      console.log("paso 3: ", (codigoEnAscii2 - 65 - offset));
+      console.log("paso 4: ", Math.abs((codigoEnAscii2 - 65 - offset)) % 26);
+      console.log("paso 5: ", ((codigoEnAscii2 - 65 - offset) % 26) + 65);*/
+      codigoEnAscii2 = ((codigoEnAscii2 - 65 - offset) % 26) + 65;
     }
     texto_desencriptado += String.fromCharCode(codigoEnAscii2);
   }
