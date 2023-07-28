@@ -1,6 +1,6 @@
 const cipher = {
 
-  encode: function (por_encriptar, offset) {
+  encode: function (offset, por_encriptar) {
     let encriptar = por_encriptar;
     encriptar = encriptar.toUpperCase();
     
@@ -16,8 +16,8 @@ const cipher = {
     return texto_encriptado
   },
  
-  decode : function (por_desencriptar, offset) {
-    console.log(por_desencriptar, offset);
+  decode : function (offset, por_desencriptar) {
+    // console.log(por_desencriptar, offset);
     let desencriptar = por_desencriptar;
     desencriptar  = desencriptar.toUpperCase();
  
@@ -25,13 +25,8 @@ const cipher = {
     for (let index = 0; index < desencriptar.length; index++) {
       let codigoEnAscii2 = desencriptar.charCodeAt(index) 
       if (codigoEnAscii2 >= 65 && codigoEnAscii2 <= 90) { 
-        /* console.log("paso 1: ", {codigoEnAscii2, offset});
-        console.log("paso 2: ", codigoEnAscii2 - 65);
-        console.log("paso 3: ", (codigoEnAscii2 - 65 - offset));
-        console.log("paso 4: ", Math.abs((codigoEnAscii2 - 65 - offset)) % 26);
-        console.log("paso 5: ", ((codigoEnAscii2 - 65 - offset) % 26) + 65);*/
         codigoEnAscii2 = ((codigoEnAscii2 - 90 - offset) % 26) + 90;
-      }
+      } 
       texto_desencriptado += String.fromCharCode(codigoEnAscii2);
     }
     return texto_desencriptado

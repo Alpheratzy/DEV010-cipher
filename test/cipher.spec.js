@@ -63,7 +63,7 @@ describe('cipher', () => {
     it('should be a function', () => {
       expect(typeof cipher.decode).toBe('function');
     });
-
+    
     it('should throw TypeError when invoked with wrong argument types', () => {
       expect(() => cipher.decode()).toThrow(TypeError);
       expect(() => cipher.decode(0)).toThrow(TypeError);

@@ -22,24 +22,16 @@ let offset=5;
 function eleccionNumero(){
   offset = parseInt(numero.value);//por alguna razón, me identificó el valor de mi selector como cadena, y no como número, asi que tocó parsear.
   alert("Seleccionaste el número " + offset);
-}
+} 
+
 //Eventos de botones
 
 btn_encriptar.addEventListener("click", function(){
-  
   document.getElementById("tx_encriptable").value = cipher.encode(por_encriptar.value, offset)
-
 })
-//btn_encriptar.addEventListener("click", encode)
 
 btn_desencriptar.addEventListener("click", function(){
   document.getElementById("tx_desencriptable").value = cipher.decode(por_desencriptar.value, offset)
 })
 
 numero.addEventListener("change", eleccionNumero);
-
-//ideas descartadas
-
-//const abcdario =["A","B","C","D","E","F","G","H","I","J","K","M","L","N","O","P","Q","R","S","T","V","W","X","Y","Z"," "];
-//let array_encriptar = Array.from(encriptar);
-
