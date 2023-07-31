@@ -1,6 +1,6 @@
 const cipher = {
 
-  encode: function (offset, por_encriptar) {
+  encode: function (offset, por_encriptar) { 
     let encriptar = por_encriptar;
     encriptar = encriptar.toUpperCase();
     

@@ -27,11 +27,11 @@ function eleccionNumero(){
 //Eventos de botones
 
 btn_encriptar.addEventListener("click", function(){
-  document.getElementById("tx_encriptable").value = cipher.encode(por_encriptar.value, offset)
+  document.getElementById("tx_encriptable").value = cipher.encode(offset, por_encriptar.value)
 })
 
 btn_desencriptar.addEventListener("click", function(){
-  document.getElementById("tx_desencriptable").value = cipher.decode(por_desencriptar.value, offset)
+  document.getElementById("tx_desencriptable").value = cipher.decode(offset, por_desencriptar.value)
 })
 
 numero.addEventListener("change", eleccionNumero);

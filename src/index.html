@@ -17,18 +17,8 @@
     <div class="contenedor">
     <main>
       <section id="numero">
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-      </head>
-      <body>
-        
-      </body>
-      </html><label id="magic">Elige tu número mágico </label>
-      <select id="magico" required>
+        <label id="magic">Elige tu número mágico </label>
+        <select id="magico" required>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -39,26 +29,26 @@
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="33">33</option>
-      </select>
+        </select>
       <!--<input id="magico" type="number" name="magic_number" min="1" max="9" required/>
       <button type="submit" name="magic_number" >Enviar</button>-->
       </section>
       <br>
       <section class="formularios">
         <article id="encriptacion">
-          <label id="por_encriptar" for="tx_encrip">¿Que mensaje quieres ocultar?</label>
+          <label id="label_encriptar" for="tx_encrip">¿Que mensaje quieres ocultar?</label>
           <br>
           <br>
           <textarea id="tx_encriptable" type="text" name="tx_encrip" rows="4" cols="30" placeholder="Escribe tu secreto" value="secreto"></textarea>
           <br>
           <br>
-          <button id="encriptar">Repello muggletum!</button>
+          <button id="encriptar">Repello!</button>
         </article>
         <div class="divisor">
           <img src="varita.png" width="200px">
         </div>
         <article id="desencriptacion">
-          <label id="por_desencriptar" for="tx_desencrip">¿Que mensaje quieres revelar?</label>
+          <label id="label" for="tx_desencrip">¿Que mensaje quieres revelar?</label>
           <br>
           <br>
           <textarea id="tx_desencriptable" name="tx_desencrip" rows="4" cols="50" placeholder="Copia tu mensaje para revelo"></textarea>
